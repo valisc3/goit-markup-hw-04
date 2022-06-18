@@ -102,7 +102,7 @@ address {
   letter-spacing: 0.02em;
 }
 .nav-contact {
-  color: #757575;
+  color: var(--main-text-color);
 }
 .icon-header {
   margin-right: 10px;
@@ -140,6 +140,9 @@ address {
   background-position: center;
   background-size: cover;
   text-align: center;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 .hero-title {
   margin: 0 auto 30px auto;
@@ -331,10 +334,13 @@ address {
   display: flex;
   justify-content: center;
 }
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
 .icon-clients {
   fill: currentColor;
 }
-.clients-item {
+.clients-link-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,11 +350,9 @@ address {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-.clients-item:not(:last-child) {
-  margin-right: 30px;
-}
-.clients-item:hover,
-.clients-item:focus {
+
+.clients-link-icon:hover,
+.clients-link-icon:focus {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
@@ -460,6 +464,8 @@ address {
 .filter-btn:focus {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn-list {
   display: flex;
@@ -484,6 +490,11 @@ address {
 }
 .card-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.card-item:hover,
+.card-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-desc {
   padding: 20px 24px 20px 24px;
